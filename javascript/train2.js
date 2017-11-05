@@ -26,6 +26,7 @@ $(document).ready(function () {
 
     //functions
     function createTableRow(train) {
+        console.log(childSnapshot.val);
         // <tr>
         //     <td>train</td>
         //     <td>Doe</td>
@@ -65,19 +66,28 @@ $(document).ready(function () {
 
     function submitHandler(event) {
         event.preventDefault();
-        var train = $("#train").val().trim();
-        console.log(train);
+        var trainName = $("#train").val().trim();
         var line = $("#line").val().trim();
         var destination = $("#destination").val().trim();
+        var firstTrain = $("#firstTrain").val().trim();
+        var frequency = $("#frequency").val().trim();
         var nextArrival = $("#nextArrival").val().trim();
         var train = {
-            train: train,
+            trainName: trainName,
             line: line,
-            destinationDate: destination,
-            rate: rate
+            destination: destination,
+            firstTrain: firstTrain,
+            frequency: frequency,
+            nextArrival: nextArrival,
         }
-        trainsRef.push(train)
-
+        console.log(train);
+        trainsRef.push(train);
+        $('#train').val("");
+        $('#line').val("");
+        $('#destination').val("");
+        $('#firstTrain').val("");
+        $('#frequency').val("");
+        $('#nextArrival').val("");
 
     };
 
