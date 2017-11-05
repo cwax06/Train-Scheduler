@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    console.log('hello world')
     // 1. Link to Firebase
 
 
@@ -15,22 +15,37 @@ $(document).ready(function () {
         messagingSenderId: "544502042419"
     };
     firebase.initializeApp(config);
-</script >
+
 
     var database = firebase.database();
-    var trainData = database.ref("/user");
+    var trains = [];
+    var trainData = database.ref("/trains");
 
 
+    // function createTableRow(train) {
+    //     var tr = $("<tr>");
+    //     var trainNameCol = $("<td>");
+    //     var lineCol = $("<td>");
+    //     var destinationCol = $("<td>");
+    //     var frequencyCol = $("<td>");
+    //     var nextArrivalCol = $("<td>");
+    //     var minutesAwayCol = $("<td>");
 
+    //     nameCol.text(train.trainName);
+    //     lineCol.text(train.line);
+    //     destinationCol.text(train.destination);
+    //     frequencyCol.text(train.frequency);
+    //     nextArrivalCol.text(train.nextTrainArrival);
+    //     minutesAwayCol.text(train.minutes);
 
-
-
-
-
-
-
-
-
+    //     $("tbody").append(tr);
+    //     tr.append(nameCol);
+    //     tr.append(lineCol);
+    //     tr.append(destinationCol);
+    //     tr.append(frequencyCol);
+    //     tr.append(nextArrivalCol);
+    //     tr.append(minutesAwayCol);
+    // }
 
 
 
@@ -183,5 +198,5 @@ $(document).ready(function () {
 
 
     });
-
 });
+

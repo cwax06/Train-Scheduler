@@ -13,7 +13,7 @@
     <!-- LINK TO FIREBASE GOES HERE -->
 
     <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
-    <script src="javascript/train.js"></script>
+
 
 </head>
 
@@ -98,28 +98,30 @@
                         <div class="panel-body">
 
                             <!-- Sign-up Form (note the various input "types")-->
-                            <form role="form">
+                            <form>
                                 <div class="form-group">
-                                    <label for="name-input">Train Name:</label>
-                                    <input class="form-control" id="name-input" type="text">
+                                    <label for="trainNameInput">Train Name:</label>
+                                    <input type="text" class="form-control" id="name">
                                 </div>
                                 <div class="form-group">
-                                    <label for="email-input">Line:</label>
-                                    <input class="form-control" id="email-input" type="email">
+                                    <label for="lineInput">Line:</label>
+                                    <input type="numbers" class="form-control" id="line">
                                 </div>
                                 <div class="form-group">
-                                    <label for="age-input">Destination:</label>
-                                    <input class="form-control" id="age-input" type="number">
+                                    <label for="destinationInput">Destination:</label>
+                                    <input type="text" class="form-control" id="name">
                                 </div>
                                 <div class="form-group">
-                                    <label for="time-input">First Train Time (HH:mm - military time)</label>
-                                    <textarea class="form-control" id="text-input"></textarea>
+                                    <label for="trainTimeInput">First Train (HH:mm - military time)</label>
+                                    <input type="numbers" class="form-control" id="firstTrain">
                                 </div>
                                 <div class="form-group">
-                                    <label for="time-input">Frequency (min)</label>
-                                    <textarea class="form-control" id="text-input"></textarea>
+                                    <label for="frequencyInput">Frequency</label>
+                                    <input type="numbers" class="form-control" id="frequency">
                                 </div>
-                                <button class="btn btn-default" id="add-user" type="submit">Submit</button>
+                                <div>
+                                    <button class="btn btn-primary" id="button">Submit</button>
+                                </div>
                             </form>
 
                         </div>
@@ -129,7 +131,11 @@
                 </div>
 
 
-
+                <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+                <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+                    crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+                <script src="javascript/train2.js"></script>
 </body>
 
 </html>
