@@ -2,15 +2,20 @@ $(document).ready(function () {
 
     // 1. Link to Firebase
 
+
+
+
+    // Initialize Firebase
     var config = {
-        apiKey: "AIzaSyAY_VxdSLXMV5trgm_pWtOd2A-EeaaWgPY",
-        authDomain: "train-time-978bc.firebaseapp.com",
-        databaseURL: "https://train-time-978bc.firebaseio.com",
-        projectId: "train-time-978bc",
-        storageBucket: "train-time-978bc.appspot.com",
-        messagingSenderId: "650158436725"
+        apiKey: "AIzaSyCl9dw69y74RNISpXUdDZfUpZyPdKOWTnA",
+        authDomain: "train-schedule-1e146.firebaseapp.com",
+        databaseURL: "https://train-schedule-1e146.firebaseio.com",
+        projectId: "train-schedule-1e146",
+        storageBucket: "",
+        messagingSenderId: "544502042419"
     };
     firebase.initializeApp(config);
+</script >
 
     var database = firebase.database();
     var trainData = database.ref("/user");
